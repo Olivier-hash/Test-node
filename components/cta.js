@@ -1,16 +1,7 @@
-
-const {Brand} = require('../models') ;
-
-exports.createBrand = async(req,res)=>{
-
-    const{brandName , description} = req.body
-
-    try {
-        const brand = await Brand.create({brandName , description});
-        res.status(201).json({message:'brand created' , brand})
-    } catch (error) {
-        
-        console.log('error occured', error)
-    }
-
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
 }
