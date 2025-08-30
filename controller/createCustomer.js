@@ -1,7 +1,7 @@
 const { Customer } = require('../models');
 
 exports.createCustomer = async (req, res) => {
-    const { name} = req.body;
+    const {fullNamame,password} = req.body;
 
     try {
         const customer = await Customer.create({ name, email, phone });
