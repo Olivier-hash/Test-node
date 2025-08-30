@@ -7,6 +7,6 @@ exports.createCustomer = async (req, res) => {
         const customer = await Customer.create({ name, email, phone });
         res.status(201).json({ message: 'customer created', customer });
     } catch (error) {
-        console.log('error occurred', error);
+        console.log('error occurred');
     }
 };
