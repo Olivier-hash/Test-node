@@ -9,6 +9,6 @@ exports.createOrder = async (req, res) => {
         const order = await Order.create({ customerId, orderDate, status });
         res.status(201).json({ message: 'order created manually', order });
     } catch (error) {
-        console.log('error occurred', error);
+        console.log('', error);
     }
 };
